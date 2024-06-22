@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(''); /* أضف مسار صورة الخلفية هنا */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+  background-color: rgb(255, 183, 0);
+  color: #fff;
+  padding: 1.25rem; /* 20px equivalent */
+  text-align: center;
+}
+
+/* Main Section */
+#section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.25rem; /* 20px equivalent */
+  gap: 1.25rem; /* 20px equivalent */
+}
+
+/* Card Styles */
+.card {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  width:30%;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--bg-color);
+  border: 0.125rem solid var(--main-color); /* 2px equivalent */
+  box-shadow: 0.25rem 0.25rem var(--main-color); /* 4px 4px equivalent */
+  border-radius: 0.3125rem; /* 5px equivalent */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.25rem; /* 20px equivalent */
+  box-sizing: border-box; /* Ensures padding is included in the total width/height */
+}
+
+/* Image styling */
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Text styling */
+.card-title {
+  font-size: 1.25rem; /* 20px equivalent */
+  font-weight: 500;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.card-subtitle {
+  font-size: 0.875rem; /* 14px equivalent */
+  font-weight: 400;
+  color: var(--font-color-sub);
+}
+
+/* Divider styling */
+.card-divider {
+  width: 50%;
+  border: 0.0625rem solid var(--main-color); /* 1px equivalent */
+  border-radius: 50px;
+}
+
+/* Footer styling */
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 1.25rem; /* 20px equivalent */
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.card-price span {
+  font-size: 1.25rem; /* 20px equivalent */
+  font-weight: 500;
+  color: var(--font-color-sub);
+}
+
+.card-btn {
+  height: 2.1875rem; /* 35px equivalent */
+  background: var(--bg-color);
+  border: 0.125rem solid var(--main-color); /* 2px equivalent */
+  border-radius: 0.3125rem; /* 5px equivalent */
+  padding: 0 0.9375rem; /* 15px equivalent */
+  transition: all 0.3s;
+}
+
+.card-btn:hover {
+  border: 0.125rem solid var(--main-focus); /* 2px equivalent */
+}
+
+.card-btn:active {
+  transform: translateY(0.1875rem); /* 3px equivalent */
+}
+
+/* Footer */
+footer {
+  background-color: rgb(173, 199, 111);
+  padding: 0.625rem; /* 10px equivalent */
+  text-align: center;
+  width: 100%;
+}
+
+.footer-info {
+  width: 50rem; /* 800px equivalent */
+  margin: 0 auto;
+}
+
+.footer-info h3 {
+  color: #ffdcdc;
+}
+
+.footer-info p {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 2.5rem); /* Full width minus the padding */
+  }
+
+  .footer-info {
+    width: 90%;
+  }
+}
+
+
+

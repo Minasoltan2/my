@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card with Image Thumbnails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .main-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .thumbnail-container img {
+            width: 60px;
+            height: auto;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+
+        .thumbnail-container img:hover {
+            border-color: #0066ff;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin: 10px 0;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            background-color: #0066ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #005ce6;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="IMG-20240611-WA0003.jpg" alt="Product Image" class="main-img" id="main-img">
+        <div class="thumbnail-container">
+            <img src="IMG-20240611-WA0003.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('IMG-20240611-WA0003.jpg')">
+            <img src="IMG-20240611-WA0004.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('IMG-20240611-WA0004.jpg')">
+            <img src="IMG-20240611-WA0005.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('IMG-20240611-WA0005.jpg')">
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Product Title</h2>
+            <p class="card-description">This is a short description of the product.</p>
+            <p class="card-price">$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(imageUrl) {
+            document.getElementById('main-img').src = imageUrl;
+        }
+    </script>
+</body>
+</html>
+
+
